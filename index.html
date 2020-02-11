@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <title>Simple Form</title>
+    <meta name="description" content="Przydatny formularz" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://image.flaticon.com/icons/svg/1363/1363601.png"
+    />
+  </head>
+
+  <body class="body">
+    <img class="logo" src="assets/memo.svg" alt="memo logo" />
+    <main class="main">
+      <h1 class="header">Simple Editor:</h1>
+      <form class="form">
+        <p class="form__wrapper">
+          <label class="form__label" for="message">Your message:</label>
+          <textarea
+            id="message"
+            class="form__textarea form__textarea--js"
+          ></textarea>
+        </p>
+        <div class="form__actions">
+          <button
+            type="button"
+            class="form__button form__button--load form__button--load--js"
+          >
+            Load
+          </button>
+          <button
+            type="submit"
+            class="form__button form__button--save form__button--save--js"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </main>
+    <img class="logo" src="assets/memo.svg" alt="memo logo" />
+    <script src="js/main.js"></script>
+  </body>
+</html>
