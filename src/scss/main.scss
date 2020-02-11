@@ -1,8 +1,10 @@
 @import "_normalize";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext");
+@import "modules/about.scss";
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -11,20 +13,15 @@ html {
   box-sizing: inherit;
 }
 
-.about__photo {
-  border: 10px solid #CBD2D9 ;
-  border-radius: 100%;
-  object-fit: contain;
-  max-height: 120px;
-  height: 100%;
-}
+
 .body {
   font-family: "Poppins", sans-serif;
-  background: #fff;
-  color: #171f3f;
-  border: 16px solid #171f3f;
+  background: $white;
+  color: $big-stone;
+  border: 16px solid $big-stone;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .main {
-  margin: 128px 125px 125px 128px;
 }
