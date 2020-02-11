@@ -1,4 +1,5 @@
 @import "_normalize";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext");
 
 html {
   box-sizing: border-box;
@@ -10,3 +11,20 @@ html {
   box-sizing: inherit;
 }
 
+.about__photo {
+  border: 10px solid #CBD2D9 ;
+  border-radius: 100%;
+  object-fit: contain;
+  max-height: 120px;
+  height: 100%;
+}
+.body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #171f3f;
+  border: 16px solid #171f3f;
+}
+
+.main {
+  margin: 128px 125px 125px 128px;
+}
