@@ -30,12 +30,6 @@ gulp.task("html", function() {
     .pipe(gulp.dest("./dist/"));
 });
 
-gulp.task("pwa", function() {
-  return gulp
-    .src("./src/pwa/**/*")
-    .pipe(gulp.dest("./dist/"));
-});
-
 gulp.task("js", function() {
   return gulp.src('src/js')
   .pipe(
@@ -80,19 +74,18 @@ gulp.task("sass", () => {
 
 gulp.task(
   "serve",
-  gulp.series("sass", "html", "js", "assets", "pwa", function() {
+  gulp.series("sass", "html", "js", "assets", function() {
     browserSync.init({
       server: "./dist",
       open: true // set to false to disable browser autostart
     });
     gulp.watch("src/scss/**/*", gulp.series("sass"));
     gulp.watch("src/content/**/*.html", gulp.series("html"));
-    gulp.watch("src/pwa/**/*", gulp.series("pwa"));
     gulp.watch("src/js/*.js", gulp.series("js"));
     gulp.watch("src/assets/**/*", gulp.series("assets"));
     gulp.watch("dist/**/*").on("change", browserSync.reload);
   })
 );
 
-gulp.task("build", gulp.series("sass", "html", "js", "assets", "pwa"));
+gulp.task("build", gulp.series("sass", "html", "js", "assets"));
 gulp.task("default", gulp.series("serve"));
