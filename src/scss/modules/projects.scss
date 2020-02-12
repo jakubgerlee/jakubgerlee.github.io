@@ -1,0 +1,64 @@
+
+.projects {
+  background: #f5f7fa;
+  padding-bottom: 168px;
+
+  &__title {
+    max-width: 1184px;
+    margin: 0px auto;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: 16px;
+  }
+  &__description {
+    margin: 0px 0 64px 128px;
+    max-width: 580px;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 24px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.project {
+  padding: 48px;
+  background: #ffffff;
+  box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+  border-radius: 8px;
+  max-width: 580px;
+
+  &__footer {
+      display: flex;
+      justify-content: flex-end;
+      background: $catskil-white;
+      padding: 16px 48px 0 0;
+    max-width: 580px;
+  }
+  &__link{
+    color: $azure-radiance;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-decoration: none;
+    &:visited {
+        color: $azure-radiance;
+      }
+  }
+}
