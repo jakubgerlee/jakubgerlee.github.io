@@ -1,8 +1,7 @@
-
 .skills {
   max-width: 1184px;
   margin: 0px auto;
-  padding-bottom: 168px;
+  padding: 0 16px 168px 16px;
 
   &__title {
     margin: 0px;
@@ -12,67 +11,80 @@
     line-height: 3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid $ghost;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 }
 
-  .skills-list {
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 8rem;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+  &__list {
+    margin: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 8rem;
-
-    &__list {
-      margin: 0px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      list-style-type: none;
-    }
-    &__item {
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.125rem;
-      padding:  11px 0 11px 30px;
-      position: relative;
-      color: $shuttle-gray;
-      &::before {
-        content: "";
-        top: 12px;
-        left: 0;
-        position: absolute;
-        background: url("../../assets/check-green.svg");
-        display: block;
-        width: 18px;
-        height: 18px;
-        .skills-list--dark-blue &{
-          background: url("../../assets/check-blue.svg");
-        }
-        .skills-list--violet & {
-          background: url("../../assets/check-violet.svg");
-        }
-      }
-    }
-
-    &__title {
-      margin: 0px;
-      font-family: Poppins;
-      font-weight: 600;
-      font-size: 2rem;
-      line-height: 1.375rem;
-      &::before {
-        content: "";
-        border-radius: 8px;
-        width: 80px;
-        height: 4px;
-        display: block;
-        background: $green;
-        margin-bottom: 1.5rem;
-        .skills-list--dark-blue &{
-          background: $dark-blue;
-        }
-        .skills-list--violet & {
-          background: $violet;
-        }
-      }
-  
+    list-style-type: none;
+    @media (max-width: $mobile) {
+      padding: 0px;
+      grid-template-columns: 1fr;
     }
   }
+  &__item {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    padding: 11px 0 11px 30px;
+    position: relative;
+    color: $shuttle-gray;
+    &::before {
+      content: "";
+      top: 12px;
+      left: 0;
+      position: absolute;
+      background: url("../../assets/check-green.svg");
+      display: block;
+      width: 18px;
+      height: 18px;
+      .skills-list--dark-blue & {
+        background: url("../../assets/check-blue.svg");
+      }
+      .skills-list--violet & {
+        background: url("../../assets/check-violet.svg");
+      }
+    }
+  }
+  &__title {
+    margin: 0px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.375rem;
+    @media (max-width: $mobile) {
+      padding-bottom: 8px;
+    }
+    &::before {
+      content: "";
+      border-radius: 8px;
+      width: 80px;
+      height: 4px;
+      display: block;
+      background: $green;
+      margin-bottom: 1.5rem;
+      @media (max-width: $mobile) {
+        width: 40px;
+      }
+      .skills-list--dark-blue & {
+        background: $dark-blue;
+      }
+      .skills-list--violet & {
+        background: $violet;
+      }
+    }
+  }
+}

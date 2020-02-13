@@ -1,6 +1,10 @@
 .projects {
   background: #f5f7fa;
   padding: 8rem 0 10.5rem;
+  @media (max-width: $mobile) {
+    padding: 8rem 16px 80px 16px;
+
+  }
   &__container {
     max-width: 1184px;
     margin: 0 auto;
@@ -12,6 +16,9 @@
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2rem;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
   &__description {
     max-width: 580px;
@@ -22,6 +29,9 @@
     font-size: 1.25rem;
     line-height: 2.25rem;
     color: $shuttle-gray;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 }
 
@@ -34,6 +44,9 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project {
@@ -42,7 +55,6 @@
   border-radius: 0.5rem;
   max-width: 580px;
   overflow: hidden; //overflow shorthand CSS property sets what to do when an element's content is too big to
-
   &__container {
     margin: 3rem 3rem;
   }
@@ -59,6 +71,7 @@
     text-align: right;
     background: $catskil-white;
     padding: 1rem 3rem 1rem 0;
+
   }
   &__icon {
     margin-right: 0.5rem;

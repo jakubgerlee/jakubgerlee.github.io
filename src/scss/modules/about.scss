@@ -2,10 +2,11 @@
 
 .about {
   max-width: 1184px;
-  padding-top: 112px 0 200px;
   margin: 0px auto;
-  padding-bottom: 208px;
-
+  padding: 0 16px 208px 16px;
+  @media (max-width: $mobile) {
+    padding-bottom: 120px;
+  }
   &__photo {
     margin-top: 128px;
     border: 10px solid $ghost;
@@ -13,6 +14,9 @@
     object-fit: contain;
     max-height: 120px;
     height: 100%;
+    @media (max-width: $mobile) {
+      margin-top: 64px;
+    }
   }
   &__title {
     margin-bottom: 2rem 0 1rem;

@@ -9,6 +9,9 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
+  @media (max-width: $mobile) {
+  font-size: 10px;
+  }
 }
 
 *,
@@ -17,12 +20,14 @@ html {
   box-sizing: inherit;
 }
 
-
 .body {
   font-family: "Poppins", sans-serif;
   background: $white;
   color: $big-stone;
   border: 16px solid $big-stone;
+  @media (max-width: $mobile){
+    border: none;
+  }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
