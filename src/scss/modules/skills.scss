@@ -51,6 +51,11 @@
       display: block;
       width: 18px;
       height: 18px;
+      @media (max-width: $mobile) {
+        width: 10.5px;
+        height: 10.5px;
+        background-size: contain;;
+      }
       .skills-list--dark-blue & {
         background: url("../../assets/check-blue.svg");
       }
