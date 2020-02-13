@@ -310,9 +310,11 @@ template {
 
 .about {
   max-width: 1184px;
-  padding-top: 112px 0 200px;
   margin: 0px auto;
-  padding-bottom: 208px; }
+  padding: 0 16px 208px 16px; }
+  @media (max-width: 768px) {
+    .about {
+      padding-bottom: 120px; } }
   .about__photo {
     margin-top: 128px;
     border: 10px solid #CBD2D9;
@@ -321,6 +323,9 @@ template {
        object-fit: contain;
     max-height: 120px;
     height: 100%; }
+    @media (max-width: 768px) {
+      .about__photo {
+        margin-top: 64px; } }
   .about__title {
     margin-bottom: 2rem 0 1rem;
     max-width: 780px;
@@ -357,7 +362,7 @@ template {
 .skills {
   max-width: 1184px;
   margin: 0px auto;
-  padding-bottom: 168px; }
+  padding: 0 16px 168px 16px; }
   .skills__title {
     margin: 0px;
     font-family: Poppins;
@@ -366,6 +371,9 @@ template {
     line-height: 3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #CBD2D9; }
+    @media (max-width: 768px) {
+      .skills__title {
+        text-align: center; } }
 
 .skills-list {
   display: -ms-grid;
@@ -373,6 +381,10 @@ template {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   padding-top: 8rem; }
+  @media (max-width: 768px) {
+    .skills-list {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr; } }
   .skills-list__list {
     margin: 0px;
     display: -ms-grid;
@@ -380,6 +392,11 @@ template {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     list-style-type: none; }
+    @media (max-width: 768px) {
+      .skills-list__list {
+        padding: 0px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr; } }
   .skills-list__item {
     font-family: Poppins;
     font-style: normal;
@@ -397,6 +414,11 @@ template {
       display: block;
       width: 18px;
       height: 18px; }
+      @media (max-width: 768px) {
+        .skills-list__item::before {
+          width: 10.5px;
+          height: 10.5px;
+          background-size: contain; } }
       .skills-list--dark-blue .skills-list__item::before {
         background: url("../../assets/check-blue.svg"); }
       .skills-list--violet .skills-list__item::before {
@@ -407,6 +429,9 @@ template {
     font-weight: 600;
     font-size: 2rem;
     line-height: 1.375rem; }
+    @media (max-width: 768px) {
+      .skills-list__title {
+        padding-bottom: 8px; } }
     .skills-list__title::before {
       content: "";
       border-radius: 8px;
@@ -415,6 +440,9 @@ template {
       display: block;
       background: #06C847;
       margin-bottom: 1.5rem; }
+      @media (max-width: 768px) {
+        .skills-list__title::before {
+          width: 40px; } }
       .skills-list--dark-blue .skills-list__title::before {
         background: #2251CC; }
       .skills-list--violet .skills-list__title::before {
@@ -423,6 +451,9 @@ template {
 .projects {
   background: #f5f7fa;
   padding: 8rem 0 10.5rem; }
+  @media (max-width: 768px) {
+    .projects {
+      padding: 8rem 16px 80px 16px; } }
   .projects__container {
     max-width: 1184px;
     margin: 0 auto; }
@@ -433,6 +464,9 @@ template {
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2rem; }
+    @media (max-width: 768px) {
+      .projects__title {
+        text-align: center; } }
   .projects__description {
     max-width: 580px;
     margin: 0 0 4rem;
@@ -442,6 +476,9 @@ template {
     font-size: 1.25rem;
     line-height: 2.25rem;
     color: #52606D; }
+    @media (max-width: 768px) {
+      .projects__description {
+        text-align: center; } }
 
 .projects-list {
   display: -ms-grid;
@@ -456,6 +493,10 @@ template {
   margin: 0;
   padding: 0;
   list-style-type: none; }
+  @media (max-width: 768px) {
+    .projects-list {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr; } }
 
 .project {
   background: #ffffff;
@@ -520,6 +561,9 @@ template {
   background: #171f3f;
   color: #fff;
   padding-top: 128px; }
+  @media (max-width: 768px) {
+    .contact {
+      padding: 120px 16px 0 16px; } }
   .contact__title {
     margin: 0 auto 2.25rem;
     padding: 1rem 0;
@@ -575,6 +619,9 @@ html {
           box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth; }
+  @media (max-width: 768px) {
+    html {
+      font-size: 10px; } }
 
 *,
 *:before,
@@ -589,5 +636,8 @@ html {
   border: 16px solid #171f3f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  @media (max-width: 768px) {
+    .body {
+      border: none; } }
 
 /*# sourceMappingURL=main.css.map */
