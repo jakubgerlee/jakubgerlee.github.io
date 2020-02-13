@@ -1,27 +1,26 @@
-.container {
-  max-width: 1184px;
-  margin: 0 auto;
-}
 .projects {
   background: #f5f7fa;
-  padding-bottom: 168px;
-
+  padding: 8rem 0 10.5rem;
+  &__container {
+    max-width: 1184px;
+    margin: 0 auto;
+  }
   &__title {
     margin: 0 0 1rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 2.25rem;
+    line-height: 2rem;
   }
   &__description {
     max-width: 580px;
-    margin: 0 0 64px;
+    margin: 0 0 4rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
     color: $shuttle-gray;
   }
 }
@@ -40,33 +39,29 @@
 .project {
   background: #ffffff;
   box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   max-width: 580px;
+  overflow: hidden; //overflow shorthand CSS property sets what to do when an element's content is too big to
 
   &__container {
-    margin: 48px 48px;
+    margin: 3rem 3rem;
   }
-
   &__description {
-    margin: 0 0 48px;
+    margin: 0 0 3rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1.125rem;
+    line-height: 2rem;
     color: $shuttle-gray;
   }
   &__footer {
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
     background: $catskil-white;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    padding: 16px 48px 16px 0;
+    padding: 1rem 3rem 1rem 0;
   }
   &__icon {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
   &__logo {
     margin-bottom: 1rem;
@@ -76,20 +71,34 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1.125rem;
+    line-height: 2rem;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      background: url("../../assets/demo-icon.svg") center center no-repeat;
+    }
+    &--code::before {
+      background: url("../../assets/code-icon.svg") center center no-repeat;
+    }
     &:visited {
       color: $azure-radiance;
     }
   }
   &__title {
-    margin: 0 0 8px;
-    padding: 0px;
+    margin: 0 0 1.125rem;
+    padding: 0;
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
   }
 }
