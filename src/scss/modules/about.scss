@@ -1,0 +1,58 @@
+@import "../variables";
+
+.about {
+  max-width: 1184px;
+  margin: 0px auto;
+  padding: 0 16px 208px 16px;
+  @media (max-width: $mobile) {
+    padding-bottom: 120px;
+  }
+  &__photo {
+    margin-top: 128px;
+    border: 10px solid $ghost;
+    border-radius: 100%;
+    object-fit: contain;
+    max-height: 120px;
+    height: 100%;
+    @media (max-width: $mobile) {
+      margin-top: 64px;
+    }
+  }
+  &__title {
+    margin-bottom: 2rem 0 1rem;
+    max-width: 780px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  &__description {
+    color: $shuttle-gray;
+    max-width: 780px;
+    width: 100%;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 3.75rem;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: $azure-radiance;
+    &:visited {
+      color: $azure-radiance;
+    }
+  }
+  &__mail {
+    padding-bottom: 8px;
+    border-bottom: 2px solid $azure-radiance;
+    padding-bottom: 8px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-decoration: none;
+    color: $azure-radiance;
+  }
+}
